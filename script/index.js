@@ -88,39 +88,35 @@ function unshiftElements() {
 
 // Задача №5 из второго блока заданий
 
-function shiftElement() {
-    let array = ['js', 'css', 'jq'];
+function shiftElement(array) {
     return array.shift();
 }
 
 // Задача №6 из второго блока заданий
 
-function popElement() {
-    let array = ['js', 'css', 'jq'];
+function popElement(array) {
     return array.pop();
 }
 
 // Задача №7,8 из второго блока заданий
 
-function getSliceArray() {
-    let initialArray = [1,2,3,4,5];
-    return [ initialArray.slice(0,3), initialArray.slice(3)];
+function getSliceArray(array) {
+    return [ array.slice(0,3), array.slice(3)];
 }
 
 // Задачи №9,10,11,12 из второго блока заданий
 
-function getSpliceArray() {
-    let initialArray = [1,2,3,4,5];
+function getSpliceArray(array) {
 
-    let task9 = initialArray.slice();
+    let task9 = array.slice();
     task9.splice(1,2);
 
-    let task10 = initialArray.slice().splice(1,3);
+    let task10 = array.slice().splice(1,3);
 
-    let task11 = initialArray.slice();
+    let task11 = array.slice();
     task11.splice(3, 0, 'a', 'b', 'c');
 
-    let task12 = initialArray.slice();
+    let task12 = array.slice();
     task12.splice(1, 0, 'a', 'b');
     task12.splice(6, 0, 'c');
     task12.splice(8, 0, 'e');
@@ -130,14 +126,14 @@ function getSpliceArray() {
 
 // Задача №13 из второго блока заданий
 
-function getSortArray() {
-    return [3,4,1,2,7].sort( function(a,b) {
+function getSortArray(array) {
+    return array.sort( function(a,b) {
         return a-b;
     });
 }
 
 // Задача №14 из второго блока заданий
 
-function getObjectKeys() {
-    return Object.keys( {js:'test', jq: 'hello', css: 'world'} );
+function getObjectKeys(object) {
+    return Object.keys( object );
 }
