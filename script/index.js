@@ -48,11 +48,11 @@ function getRandomNumber(min, max) {
 
 // Задача №4 из первого блока заданий
 
-function randomArray() {
+function getRandomArray(arrayLength, minValue, maxValue) {
     let array = [];
 
-    for (let i = 0; i < 10; i++) {
-        array[i] = getRandomNumber(1, 100);
+    for (let i = 0; i < arrayLength; i++) {
+        array[i] = getRandomNumber(minValue, maxValue);
     }
 
     return array;
@@ -72,17 +72,15 @@ function gerReversedArray(array) {
 
 // Задача №3 из второго блока заданий
 
-function pushElements() {
-    let array = [1,2,3];
-    array.push(4,5,6);
+function pushElements(array, ...pushElements) {
+    array.push(...pushElements);
     return array;
 }
 
 // Задача №4 из второго блока заданий
 
-function unshiftElements() {
-    let array = [1,2,3];
-    array.unshift(4,5,6);
+function unshiftElements(array, ...unshiftElements) {
+    array.unshift(...unshiftElements);
     return array;
 }
 
